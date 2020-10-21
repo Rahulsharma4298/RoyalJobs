@@ -1,0 +1,562 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.menu-bar{
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a); 
+}
+
+.nav-link{
+    font-size: 17.5px;
+    color: #fff !important;
+    margin: 2px;
+    font-weight: 500;
+}
+
+.nav-link:hover{
+    background-color: #068ff1;
+}
+
+.navbar-nav{
+    text-align: right;
+}
+
+.menu-bar .navbar-toggler{
+    padding-right: 0;
+    outline: none;
+    border: none;
+}
+
+.menu-bar .navbar-toggler:hover{
+    padding-right: 0;
+    outline: none;
+    border: none;
+}
+
+.banner{
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.banner h1{
+    padding-top: 170px;
+    font-size: 38px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    text-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.search-job{
+    padding: 30px 0;
+    margin: -50px 6% 50px;
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a); 
+}
+
+.search-job .form-control{
+    max-width: 300px;
+    display: inline-flex;
+    margin: 10px 5px;
+    border-radius: 0;
+    box-shadow: none !important; 
+    border: none !important; 
+}
+
+.search-job .btn-primary{
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    display: inline-flex;
+    margin: 5px;
+    margin-right: 40px;
+    padding: 6px 20px;
+}
+
+#cat{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
+#cat .card{
+    width: 200px;
+    height: 150px;
+    margin: 50px 30px 10px 50px;
+    display: inline-block;
+}
+
+#cat .card:hover{
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a); 
+    cursor: pointer;
+}
+
+#cat .card-body{
+    margin-top: 15px;
+}
+
+#cat .card-body .fa{
+    font-size: 30px;
+    margin: 10px;
+}
+
+#cat h5{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+
+h3::before{
+    content: '';
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a);
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    z-index: -10;
+    margin-top: -15px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 90px;  
+}
+
+#recruiters img{
+    max-width: 100px;
+    margin: 10px 20px;
+}
+
+#jobs{
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+
+#jobs h3{
+    margin-bottom: 30px;
+}
+
+
+.company-details{
+    box-shadow: 0 2px 70px 0 rgba(110,130,208, .18);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.job-update{
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.job-update .fa{
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #77d1b1
+}
+
+.job-update small{
+    background: #efefef;
+    padding: 1px 5px;
+    margin: 0 5px;
+}
+
+.job-update p{
+    margin-bottom: 0 !important;
+}
+
+.job-update a{
+    text-decoration: none !important;
+    color: #b6bed2;
+    float: right;
+}
+
+.apply-btn{
+    height: 40px;
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a);
+    padding: 7px;
+    border-bottom-left-radius: 5px;
+}
+
+.apply-btn .btn-primary{
+    padding: 0 30px;
+    float: right;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+
+.page-link li{
+    height: 25px;
+    width: 25px;
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.page-link li:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a);
+}
+
+.left-arrow{
+    color: #999;
+}
+
+.right-arrow{
+    color: #29b9;
+}
+
+#site-stats{
+    padding: 100px 0;
+}
+
+#site-stats h3{
+    margin-bottom: 30px;
+}
+
+.state-box{
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 40px 0 rgba(110,130,208, .18);
+}
+
+.state-box .fa{
+    font-size: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+#app-banner{
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a);
+    padding: 50px 0;
+}
+
+#app-banner h1{
+    margin-top: 20px;
+    color: #fff;
+}
+
+#app-banner img{
+    width: 150px;
+    margin: 50px 0;
+}
+
+footer{
+    background:#2E332E;
+    padding: 20px 10px 8px;
+
+}
+
+.footer-image{
+    margin: 20px 0;
+    height: 40px;
+}
+
+footer p{
+    color: #f8f9fa;
+    font-weight: 545;
+    margin: 10px;
+}
+
+footer p:hover{
+    cursor: default;
+    color: greenyellow;
+}
+
+footer .fa{
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 60px;
+   
+}
+
+footer .fa:hover{
+    opacity: 0.7; 
+    cursor: pointer;   
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+.fa-whatsapp {
+    background: yellowgreen;
+    color:white;
+}
+
+#login {
+    width: 50px;
+    height: 50px;
+    border: 2px solid green;
+    margin: 100px;
+}
+
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+
+.contact-image{
+    text-align: center;
+}
+
+.card-contact{
+        border: 0;
+        border-radius: 0rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1)
+}
+
+.card-contact .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem
+}
+
+#msgbox{
+    display: inline;
+    
+}
+
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem
+}
+
+#log-reg-con{
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a)
+}
+
+#log-reg-con .card-signin {
+    border: 0;
+    border-radius: 0rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1)
+   
+}
+
+#log-reg-con .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem
+}
+
+#log-reg-con .card-signin .card-body {
+    padding: 2rem
+}
+
+#log-reg-con .form-signin {
+    width: 100%
+}
+
+#log-reg-con .form-signin .btn {
+    font-size: 80%;
+    border-radius: 0rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s
+}
+
+#log-reg-con .form-label-group {
+    position: relative;
+    margin-bottom: 1rem
+}
+
+#log-reg-con .form-label-group input {
+    height: auto
+}
+
+#log-reg-con .form-label-group>input,
+#log-reg-con .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x)
+}
+
+
+#log-reg-con .form-control:focus {
+    box-shadow: 10px 0px 0px 0px #ffffff !important
+}
+
+#log-reg-con .btn-google {
+    color: white;
+    background-color: #ea4335
+}
+
+#log-reg-con .btn-facebook {
+    color: white;
+    background-color: #3b5998
+}
+
+#profile{
+    margin-top: auto;
+    box-shadow: 3px 3px 3px;
+    border: 0;
+    border-radius: 0rem;
+    /*box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1)*/
+    
+}
+
+.border{
+    border-bottom:1px solid #F1F1F1;
+    margin-bottom:10px;
+  }
+
+
+.image-section{
+    padding: 0px;
+}
+
+.image-section img{
+    width: 100%;
+    height:250px;
+    position: relative;
+}
+
+.user-image{
+    position: absolute;
+    margin-top: 45px;
+}
+
+.user-image img:hover{
+    cursor: pointer;
+    border: 2px solid rgb(91, 91, 238);
+}
+
+.user-left-part{
+   width: 1500px;
+}
+
+.user-image img{
+    width:100px;
+    height:100px;
+}
+
+.user-image h1{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 500;
+    
+}
+
+.user-profil-part{
+    background: linear-gradient(to right, #6db9ef, #7ce88a);
+    padding-bottom: 30px;
+}
+  
+.follow{    
+    margin-top: 15px; 
+}
+
+#profile .btn{
+    border-style: none;
+    border-radius: 0; 
+}
+
+.user-detail-row{
+    margin: 30px;
+}
+
+.user-detail-section2 p{
+    font-size:12px;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.user-detail-section2 span{
+    color:white;
+    font-size: 20px;
+}
+
+.user-detail-section2{
+    margin-top:10px;
+  }
+
+.user-detail-section2 small{
+    font-size:12px;
+    color:#D3A86A;
+}
+
+.profile-header-section1 h1{
+    font-size: 32px;
+    margin: 15px 10px 0 0;   
+}
+
+.profile-header{
+    margin: 5px;
+}
+
+#profile .nav-link{
+    font-size: 1.1em;    
+}
+  
+#profile .container{
+    padding: 2rem;
+}
+
+#profile .card{
+    width: 150px;
+    height: 130px;
+    margin: 20px 20px 0 0;
+    display: inline-block;
+    
+}
+
+#profile .card:hover{
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a); 
+    cursor: pointer;
+}
+
+#profile .card-body{
+    margin-top: 10px;
+}
+
+#profile .card-body .fa{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: 8px;
+    padding-top: 5px; 
+
+    
+}
+
+#profile h5{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.tab {
+    display: none;
+    overflow-y: scroll;
+    overflow-x: none;
+    max-height: 500px;
+  }
+
+  #menu-card{
+      display: block;
+  }
+
+.edit-user{
+    margin: 0;
+    width: 600px;
+    background-color: white;
+}
