@@ -1,6 +1,5 @@
 <?php include 'inc/header.php'; ?>
 <head>
-	<link rel="stylesheet" href="css/profile.css">
 	<script src="css/switch.js"></script>
 </head>
 
@@ -64,18 +63,95 @@
                                 </div>
                               </div></div>
 
-                            <div class="tab">
-                            	<section class="edit-user">
-                            		<h1>HELLO</h1>
- 								</section>
-                            	<button onclick="showCurrent(0);" class="btn btn-success">Back</button>
-                        	</div>
+                            <div class="tab container"><h3>My Profile</h3><hr>
+                              <form class="form-edit">
+                                <fieldset disabled>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputFirstName">First Name</label>
+                                    <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputLastName">Last Name</label>
+                                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputEmail">Email</label>
+                                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
 
-                            <div class="tab"><h1>HELLO 2</h1><button onclick="showCurrent(1);" class="btn btn-success">Back</button></div>
-                            <div class="tab"><h1>HELLO 3</h1><button onclick="showCurrent(2);" class="btn btn-success">Back</button></div>
-
-
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputMobile">Mobile No.</label>
+                                    <input type="text" class="form-control" id="inputMobile" placeholder="Mobile No.">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                                  </div>
+                                </div></fieldset>
+                                <button type="submit" class="btn btn-primary">Save</button><br></form>
+            
+                                <div class="btn-group">
+                                  <button class="btn btn-success">Edit</button>
+                                  <button onclick="showCurrent(0);" class="btn btn-dark">Back</button>
+                                </div>
+                              
+                              
+                              
+                            
+                                </div>
+                                <div class="tab applied-jobs"><h3>Applied Jobs</h3>
+                                  <table class="table table-bordered table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">JobID</th>
+                                        <th scope="col">Title</th>
+                                        <th scope="col">Category</th>
+                                        <th scope="col">Apply Date</th>
+                                        <th scope="col">Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><a href="">@mdo</a></td>
+                                        <td><a href="">@mdo</a></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td><a href="">@mdo</a></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td colspan="2">Larry the Bird</td>
+                                        <td>@twitter</td>
+                                        <td><a href="">@mdo</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                  
+                                  <button onclick="showCurrent(1);" class="btn btn-dark">Back</button>
+                                
+                                </div>
+                                <div class="tab"><h3>Notifications</h3>
+                                  <p class="alert btn-primary"><i class="fa fa-bell"> You request has been approved.</p></i>
+                                  <p class="alert btn-primary"><i class="fa fa-bell"></i> You request have been selected for job 1.</p></i>
+                                  
+                                  <button onclick="showCurrent(2);" class="btn btn-dark">Back</button></div>
                             </div>
+
+
+                            
+
+
+                          </div>
                         </div>
                     </div></div></div>
                       

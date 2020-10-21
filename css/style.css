@@ -8,14 +8,14 @@
     background-image: linear-gradient(to right, #6db9ef, #7ce88a); 
 }
 
-.nav-link{
+#header .nav-link{
     font-size: 17.5px;
     color: #fff !important;
     margin: 2px;
     font-weight: 500;
 }
 
-.nav-link:hover{
+#header .nav-link:hover{
     background-color: #068ff1;
 }
 
@@ -78,8 +78,7 @@
 
 #cat{
     padding-top: 100px;
-    padding-bottom: 100px;
-    
+    padding-bottom: 100px;   
 }
 
 #cat .card{
@@ -339,7 +338,7 @@ footer .fa:hover{
     --input-padding-y: .75rem
 }
 
-#log-reg-con{
+#log-reg-con, #apply{
     background-image: linear-gradient(to right, #6db9ef, #7ce88a)
 }
 
@@ -364,7 +363,7 @@ footer .fa:hover{
     width: 100%
 }
 
-#log-reg-con .form-signin .btn {
+#log-reg-con, #apply .form-signin .btn {
     font-size: 80%;
     border-radius: 0rem;
     letter-spacing: .1rem;
@@ -379,7 +378,7 @@ footer .fa:hover{
 }
 
 #log-reg-con .form-label-group input {
-    height: auto
+    height: auto;
 }
 
 #log-reg-con .form-label-group>input,
@@ -400,6 +399,54 @@ footer .fa:hover{
 #log-reg-con .btn-facebook {
     color: white;
     background-color: #3b5998
+}
+
+#apply .card-signin{
+    border: 0;
+    border-radius: 0rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1)
+} 
+
+#apply .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem
+}
+
+#apply .form-signin {
+    width: 100%
+}
+
+#apply .form-control:focus {
+    box-shadow: 10px 0px 0px 0px #ffffff !important
+}
+
+#apply .card-signin .card-body {
+    padding: 2rem
+}
+
+#apply .form-label-group {
+    position: relative;
+    margin-bottom: 1rem
+}
+
+#apply, .form-label-group input {
+    height: auto
+}
+
+#apply .form-label-group>input,
+#apply .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x)
+}
+
+
+#apply .form-control:focus {
+    box-shadow: 10px 0px 0px 0px #ffffff !important
+}
+
+#apply .card{
+    
+    width: 650px;
 }
 
 #profile{
@@ -496,7 +543,7 @@ footer .fa:hover{
 
 .profile-header-section1 h1{
     font-size: 32px;
-    margin: 15px 10px 0 0;   
+    margin: 15px 5px 0 0;   
 }
 
 .profile-header{
@@ -546,17 +593,68 @@ footer .fa:hover{
 
 .tab {
     display: none;
-    overflow-y: scroll;
-    overflow-x: none;
-    max-height: 500px;
   }
 
   #menu-card{
       display: block;
   }
 
-.edit-user{
-    margin: 0;
-    width: 600px;
-    background-color: white;
+  #profile .tab{
+      width: auto; 
+      padding: 1rem;
+      /*box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1)*/
+  }
+
+  #profile .tab h3{
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #065ff1;
+  }
+
+  #profile .tab .form-edit{
+      width: 100%;
+  }
+
+  #profile .form-label-group {
+    position: relative;
+    margin-bottom: 1rem
 }
+
+#profile .tab .form-label-group input {
+    height: auto;
+}
+
+#profile .form-label-group>input,
+#profile .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+#profile .tab .form-control:focus {
+    box-shadow: 10px 0px 0px 0px #ffffff !important;
+}
+
+#profile .tab .btn-group .btn{
+    margin: 10px 10px 20px 100px;
+    width: 80px;
+    display: inline-block;
+    margin-top: -36px;
+    
+}
+
+.applied-jobs table{
+    max-height: 280px;
+}
+
+
+
+.applied-jobs{
+    height: 400px;
+}
+
+
+ 
+
+
+
+
