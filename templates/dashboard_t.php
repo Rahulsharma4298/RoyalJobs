@@ -94,15 +94,16 @@
                                 <button type="submit" class="btn btn-primary">Save</button><br></form>
             
                                 <div class="btn-group">
-                                  <button class="btn btn-success">Edit</button>
-                                  <button onclick="showCurrent(0);" class="btn btn-dark">Back</button>
+                                  <button class="btn btn-success" id="btnEdit">Edit</button>
+                                  <button onclick="showCurrent(0);" id="btnBack" class="btn btn-dark">Back</button>
                                 </div>
                               
                               
                               
                             
                                 </div>
-                                <div class="tab applied-jobs"><h3>Applied Jobs</h3>
+                                <div class="tab applied-jobs container"><h3>Applied Jobs</h3>
+                                  <div class="table-responsive">
                                   <table class="table table-bordered table-hover">
                                     <thead>
                                       <tr>
@@ -135,7 +136,7 @@
                                         <td><a href="">@mdo</a></td>
                                       </tr>
                                     </tbody>
-                                  </table>
+                                  </table></div>
                   
                                   <button onclick="showCurrent(1);" class="btn btn-dark">Back</button>
                                 
@@ -144,12 +145,9 @@
                                   <p class="alert btn-primary"><i class="fa fa-bell"> You request has been approved.</p></i>
                                   <p class="alert btn-primary"><i class="fa fa-bell"></i> You request have been selected for job 1.</p></i>
                                   
-                                  <button onclick="showCurrent(2);" class="btn btn-dark">Back</button></div>
+                                  <button onclick="showCurrent(2);" class="btn btn-dark">Back</button>
+                                </div>
                             </div>
-
-
-                            
-
 
                           </div>
                         </div>
