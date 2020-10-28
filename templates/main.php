@@ -9,9 +9,11 @@
 </section>
 
 <div class="search-job text-center">
-  <input type="text" class="form-control" placeholder="Search keywod">
-  <input type="text" class="form-control" placeholder="Location">
-  <input type="button" class="btn btn-primary" value="Find Job">
+  <form method="GET" action="index.php#jobs" ng-submit="submitSearch()" role="form" name="studentForm" novalidate>
+  <input type="text" class="form-control" name="q" placeholder="Search keywod" ng-class="{'has-error': submitSearch.q.$touched && submitSearch.q.$error.required , 'has-success': submitSearch.q.$valid }">
+  <input type="text" class="form-control" name="city" placeholder="Location">
+  <button type="submit" class="btn btn-primary">Find Job</button> 
+</form>
 </div>
 
 <section id="cat">
@@ -78,19 +80,19 @@
         <h4><b><?php echo $job->job_title; ?></b></h4>
         <p><?php echo $job->company; ?></p>
         <i class="fa fa-briefcase"></i><span>0-1 yrs</span></br>
-        <i class="fa fa-inr"></i><span><?php echo $job->salary; ?> LPA</span></br>
+        <i class="fa fa-inr"></i><span><?php echo $job->salary; ?></span></br>
         <i class="fa fa-map-marker"></i><span><?php echo $job->location; ?></span></br>
-        <p>Skills <i class="fa fa-angle-double-right"></i><small>java</small>
-        <small>python</small> <small>HTML,CSS</small> <small>. Net</small></p>
+        <!--<p>Skills <i class="fa fa-angle-double-right"></i><small>java</small>
+        <small>python</small> <small>HTML,CSS</small> <small>. Net</small></p> -->
           <p>Description <i class="fa fa-angle-double-right"></i><?php echo $job->description; ?>
-         <a href="#">Read More</a></p>
+          <!-- <a href="#">Read More</a></p> -->
       </div>
       <div class="apply-btn">
         <button type="button" class="btn btn-primary" onclick="window.location='apply.php?id=<?php echo $job->id; ?>'">Apply</button>
       </div>
     </div>
     <?php endforeach; ?>
-     <ul class="page-link text-center">
+     <!-- <ul class="page-link text-center">
       <li class="left-arrow">&#8592</li>
        <li class="active">1</li>
        <li>2</li>
@@ -98,7 +100,7 @@
        <li>4</li>
        <li>5</li>
        <li class="right-arrow">&#8594</li>
-     </ul>
+     </ul> -->
   </div>
 </section>
 
@@ -147,6 +149,7 @@
 
 <section id="app-banner" class="text-center">
   <h1>Find Jobs On Mobile, Download RoyalJobs App </h1>
+  <p class="text-dark"><strong>Will be Available soon.</strong></p>
   <img src="images/app_store.png">
   <img src="images/play_store.png">
 </section>

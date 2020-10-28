@@ -43,6 +43,12 @@ function displayMessage(){
 						echo '<script>swal("You must login first!", "Please Login to continue", "error");</script>';
 					}
 
+				elseif ($message == "Old Password is not correct!") {
+						echo '<script>swal("Old Password is not correct!", "Please type correct old password", "error");</script>';
+					}	
+
+
+
 				else{
 					if($message == 'Email already exists!'){
 					echo '<script>swal("Signup Error!", "Email already exists", "error");</script>';
@@ -64,8 +70,21 @@ function displayMessage(){
 				}
 
 					elseif ($message == "Logout Successfull!") {
-						echo '<script>swal("Logout Successfull!", "Bye", "success");</script>';
+						echo '<script>swal("Logout Successfull!", "Good Bye!", "success");</script>';
 					}
+
+					elseif ($message == "Profile Updated Successfully!") {
+						echo '<script>swal("Profile Updated Successfully!", "Information Updated", "success");</script>';
+					}
+
+					elseif ($message == "Password Changed Successfully!") {
+						echo '<script>swal("Password Changed Successfully!", "Always Choose Secure Password", "success");</script>';
+					}
+
+					elseif ($message == "Successfully Applied for this Job!") {
+						echo '<script>swal("Successfully Applied for this Job!", "Good Luck!", "success");</script>';
+					}
+						
 
 					else{
 						echo '';

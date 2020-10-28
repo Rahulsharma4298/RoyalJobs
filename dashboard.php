@@ -7,10 +7,8 @@ $database = new DatabaseAuth();
 $db = $database->getConnection();
 $user = new User($db);
 $template->ud = $user->getUserDetails(intval($_SESSION['uid']));
+$template->jd = $user->getUserJobs(intval($_SESSION['uid']));
+$template->count = $user->getCountOfAppliedJobs(intval($_SESSION['uid']));
 echo $template;
-
-
-
-
 ?>
 

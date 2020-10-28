@@ -43,11 +43,11 @@ class User{
         $stmt = $this->conn->prepare($query);
     
         // sanitize
-        $this->first_name=htmlspecialchars(strip_tags($this->first_name));
-        $this->last_name=htmlspecialchars(strip_tags($this->last_name));
-        $this->email=htmlspecialchars(strip_tags($this->email));
+        $this->first_name=strtolower(htmlspecialchars(strip_tags($this->first_name)));
+        $this->last_name=strtolower(htmlspecialchars(strip_tags($this->last_name)));
+        $this->email=strtolower(htmlspecialchars(strip_tags($this->email)));
         $this->password=htmlspecialchars(strip_tags($this->password));
-        $this->city=htmlspecialchars(strip_tags($this->city));
+        $this->city=strtolower(htmlspecialchars(strip_tags($this->city)));
         $this->mobile=htmlspecialchars(strip_tags($this->mobile));
         $this->created=htmlspecialchars(strip_tags($this->created));
         $this->ip=htmlspecialchars(strip_tags($this->ip));
@@ -109,11 +109,9 @@ class User{
         "mobile" => $row['mobile']
     );
 
-        return $user_details;
-
-
-        
+        return $user_details; 
     }
+
     function isAlreadyExist(){
         $query = "SELECT *
             FROM
@@ -144,4 +142,99 @@ class User{
     }
     return $ip;
 }
+
+function updateUser($uid, $first_name, $last_name, $mobile, $city){
+    $query = "UPDATE
+                    " . $this->table_name . "
+                SET
+                    first_name=:first_name,
+                    last_name=:last_name,  
+                    mobile=:mobile, 
+                    city=:city WHERE uid=". $uid . "";
+    
+        // prepare query
+        $stmt = $this->conn->prepare($query);
+    
+        // sanitize
+        $first_name=htmlspecialchars(strip_tags($first_name));
+        $last_name=htmlspecialchars(strip_tags($last_name));
+        $mobile=htmlspecialchars(strip_tags($mobile));
+        $city=htmlspecialchars(strip_tags($city));
+        // bind values
+        $stmt->bindParam(":first_name", $first_name);
+        $stmt->bindParam(":last_name", $last_name);
+        $stmt->bindParam(":mobile", $mobile);
+        $stmt->bindParam(":city", $city);
+        
+
+        // execute query
+        if($stmt->execute()){
+            return true;
+        }
+    
+        return false;
+        
+    }
+
+function getUserJobs($uid){
+    $query = "SELECT jobs.id, jobs.job_title, apply.apply_date, apply.status FROM jobs INNER JOIN apply ON jobs.id = apply.job_id WHERE apply.uid = " . $uid . ";";
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // execute query
+        $stmt->execute();
+        $row = $stmt->fetchAll(PDO::FETCH_OBJ);
+        return $row;
+
 }
+
+function getCountOfAppliedJobs($uid){
+    $query = "SELECT count(jobs.id) FROM jobs INNER JOIN apply ON jobs.id = apply.job_id WHERE apply.uid = " . $uid . ";";
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // execute query
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $row;
+}
+
+function verifyPass($uid, $old_pass){
+    $query = "SELECT *
+            FROM
+                " . $this->table_name . " 
+            WHERE
+                password='".$old_pass."' AND uid='".$uid."'";
+        // prepare query statement
+        $stmt = $this->conn->prepare($query);
+        // execute query
+        $stmt->execute();
+        if($stmt->rowCount() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+}
+
+function changePass($uid, $old_pass, $new_pass){
+    $old_pass=htmlspecialchars(strip_tags($old_pass));
+    $new_pass=htmlspecialchars(strip_tags($new_pass));
+
+    $status = $this->verifyPass($uid, $old_pass);
+    if($status){
+        $query = "UPDATE
+                    " . $this->table_name . "
+                SET
+                    password=:new_pass WHERE uid=". $uid ."";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":new_pass", $new_pass);
+        if($stmt->execute()){
+            return true;
+        }
+        
+    return false;     
+    }
+
+}
+}
+
